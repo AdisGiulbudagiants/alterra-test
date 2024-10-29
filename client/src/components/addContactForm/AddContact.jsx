@@ -14,7 +14,7 @@ const AddContact = () => {
   }
 
   return (
-    <div className="w-[320px] h-[250px] bg-white border border-white rounded-[4px] shadow-md">
+    <div className="w-[320px] h-[250px] mt-[20px] bg-white border border-white rounded-[4px] shadow-md">
       <div className="pl-[25px] h-[60px] border-b border-[#eee] flex items-center">
         <h1>Добавить контакт</h1>
       </div>
