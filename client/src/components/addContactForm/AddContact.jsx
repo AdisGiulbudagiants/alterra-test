@@ -1,6 +1,10 @@
 import { useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { selectIsLoading, addContact } from "../../redux/slices/contactsSlice"
+import {
+  selectIsLoading,
+  addContact,
+  getAllContacts,
+} from "../../redux/slices/contactsSlice"
 
 const AddContact = () => {
   const [name, setName] = useState("")
@@ -11,6 +15,9 @@ const AddContact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     await dispatch(addContact({ name, phone }))
+    setName("")
+    setPhone("")
+    dispatch(getAllContacts()) // Обновляем список контактов после добавления
   }
 
   return (
@@ -23,6 +30,7 @@ const AddContact = () => {
         className="gap-[10px] grid mt-[20px] px-[25px]">
         <input
           onChange={(e) => setName(e.target.value)}
+          value={name}
           className="pl-[15px] h-[40px] rounded-[4px] border border-[#eee] placeholder:text-[#a8a8a8]"
           type="text"
           placeholder="Имя"
@@ -30,6 +38,7 @@ const AddContact = () => {
         />
         <input
           onChange={(e) => setPhone(e.target.value)}
+          value={phone}
           className="pl-[15px] h-[40px] rounded-[4px] border border-[#eee] placeholder:text-[#a8a8a8]"
           type="tel"
           placeholder="Телефон"
