@@ -21,13 +21,14 @@ const ContactsList = () => {
       </div>
       <div>
         {contactsData.length === 0 ? (
-          <div className=" mt-5 flex justify-center items-center">
+          <div className="mt-5 flex justify-center items-center">
             <p>Пусто пока что...</p>
           </div>
         ) : (
           contactsData.map((contact) => (
             <Contact
               key={contact.id}
+              id={contact.id}
               name={contact.full_name}
               phone={contact.phone}
             />

@@ -15,9 +15,9 @@ const AddContact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     await dispatch(addContact({ name, phone }))
+    dispatch(getAllContacts()) // Обновляем список контактов после добавления
     setName("")
     setPhone("")
-    dispatch(getAllContacts()) // Обновляем список контактов после добавления
   }
 
   return (
