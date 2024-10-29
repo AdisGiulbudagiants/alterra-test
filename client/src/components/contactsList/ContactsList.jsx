@@ -15,8 +15,8 @@ const ContactsList = () => {
   }, [dispatch])
 
   return (
-    <div className="w-[320px] min-h-[250px] bg-white border border-white rounded-[4px] shadow-md">
-      <div className="pl-[25px] h-[60px] border-b border-[#eee] flex items-center">
+    <div className="w-[20rem] min-h-[15.625rem] bg-white border border-white rounded-[0.25rem] shadow-md">
+      <div className="pl-[1.563rem] h-[3.75rem] border-b border-[#eee] flex items-center">
         <h1>Список контактов</h1>
       </div>
       <div>

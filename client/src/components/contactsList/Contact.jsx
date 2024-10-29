@@ -13,14 +13,14 @@ const Contact = ({ name, phone, id }) => {
   console.log(id)
 
   return (
-    <div className="h-[70px] px-[25px] flex flex-col justify-center border-b border-[#eee] last:border-0 hover:bg-gray-200 transition ease-in-out">
+    <div className="h-[4.375rem] px-[1.563rem] flex flex-col justify-center border-b border-[#eee] last:border-0 hover:bg-gray-200 transition ease-in-out">
       <div className="flex items-center">
-        <p className="mr-[5px]">{name}</p>
+        <p className="mr-[0.313rem]">{name}</p>
         <button onClick={() => handleDelete(id)} type="button">
           <RxCross2 className="hover:scale-150" />
         </button>
       </div>
-      <p className="text-[#858585] text-[13px]">{phone}</p>
+      <p className="text-[#858585] text-[0.813rem]">{phone}</p>
     </div>
   )
 }

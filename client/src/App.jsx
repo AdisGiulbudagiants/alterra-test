@@ -4,7 +4,7 @@ import Notification from "./components/Notification"
 
 function App() {
   return (
-    <div className="w-full min-h-screen bg-[#eceff4] flex flex-col justify-center items-center gap-[20px]">
+    <div className="w-full min-h-screen bg-[#eceff4] flex flex-col justify-center items-center gap-[1.25rem]">
       <AddContact />
       <ContactsList />
       <Notification />
